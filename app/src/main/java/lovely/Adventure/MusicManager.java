@@ -16,7 +16,7 @@ import java.util.HashMap;
 import lovely.game2.R;
 
 public class MusicManager {
-    private static ArrayList<MediaPlayer> musicMainMenuArray;
+    private static ArrayList<MediaPlayer> musicMainMenuArray = new ArrayList<>();
     private static final String TAG = "lovely.Adventure.MusicManager";
     public static final int MUSIC_PREVIOUS = -1;
     public static final int MUSIC_MENU = 0;
@@ -28,7 +28,7 @@ public class MusicManager {
     private static int previousMusic = -1;
 
     public static void setMusicMainMenu(ArrayList<MediaPlayer> musicMainMenu) {
-        if ((musicMainMenuArray == null)) {
+        if ((musicMainMenuArray.size() == 0 )) {
             musicMainMenuArray = musicMainMenu;
             for (int i = 0; i < musicMainMenuArray.size(); i++) {
                 if (i == (musicMainMenuArray.size()-1)) {

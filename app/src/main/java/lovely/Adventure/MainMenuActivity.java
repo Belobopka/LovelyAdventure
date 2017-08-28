@@ -22,8 +22,10 @@ public class MainMenuActivity extends Activity  {
         final Button buttonplay = (Button) findViewById(R.id.button);
         final Button buttonhelp = (Button) findViewById(R.id.button3);
         final Button buttonexit = (Button) findViewById(R.id.button2);
+
         MusicManager.setMusicMainMenu(MusicManager.setMusicArrayList("mm",this));
         MusicManager.start(this,MusicManager.MUSIC_MENU);
+
 
 
         buttonplay.setOnClickListener(new View.OnClickListener() {
@@ -42,11 +44,12 @@ public class MainMenuActivity extends Activity  {
                 finish();
             }
         });
-        buttonexit.setOnClickListener(new View.OnClickListener() {
+        buttonexit.setOnClickListener(new View.OnClickListener()  {
             @Override
             public void onClick(View view) {
                 MusicManager.release();
                 finish();
+                android.os.Process.killProcess(android.os.Process.myPid());
             }
         });
     }
