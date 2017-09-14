@@ -1,2 +1,2 @@
 # LovelyAnveture
-Simple 2D Platformer game I developed by book.
+Simple 2D Platformer game I developed with book's help.
